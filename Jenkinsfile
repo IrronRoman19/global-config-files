@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-                sh '/usr/local/bin/app.js'
+                sh '/usr/local/bin/node app.js'
             }
         }
     }
