@@ -11,5 +11,10 @@ pipeline {
                 sh 'echo my first jenkinsfile'
             }
         }
+        stage('Run') {
+            steps {
+                sh '/usr/local/bin/app.js'
+            }
+        }
     }
 }
