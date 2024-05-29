@@ -19,11 +19,5 @@ pipeline {
                 sh 'node /usr/local/bin/app.js'
             }
         }
-        stage('Exit') {
-            steps {
-                sh 'echo Finishing'
-                sh 'exit 1'
-            }
-        }
     }
 }
