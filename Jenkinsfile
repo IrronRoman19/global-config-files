@@ -1,19 +1,19 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
-            steps {
-                sh '/usr/local/bin/node -v'
-            }
-        }
-        stage('Test') { 
+        stage('Start') {
             steps {
                 sh 'echo my first jenkinsfile'
             }
         }
-        stage('Run') {
+        stage('CheckNodeVer') { 
             steps {
-                sh '/usr/local/bin/node app.js'
+                sh '/usr/local/bin/node -v'
+            }
+        }
+        stage('Build') { 
+            steps {
+                sh 'node /usr/local/bin/app.js'
             }
         }
     }
